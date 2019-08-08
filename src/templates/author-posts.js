@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout from '../components/layout'
-import Post from '../components/Post'
+import Layout from '../components/layout1'
+import Post from '../components/Post1'
 import { graphql } from 'gatsby'
 import authors from '../util/authors'
 

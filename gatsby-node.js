@@ -20,7 +20,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
   // Page templates
   const templates = {
-    post: path.resolve('src/templates/single-post.js'),
+    post: path.resolve('src/templates/single-post1.js'),
     postList: path.resolve('src/templates/post-list.js'),
     tag: path.resolve('src/templates/tag-posts.js'),
     tagsPage: path.resolve('src/templates/tags-page.js'),

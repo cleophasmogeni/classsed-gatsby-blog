@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout from '../components/layout'
-import Post from '../components/Post'
+import Layout from '../components/layout1'
+import Post from '../components/Post1'
 import { graphql } from 'gatsby'
 import PaginationLinks from '../components/PaginationLinks'
 
@@ -9,7 +9,7 @@ const postList = props => {
   const { currentPage, numberOfPages } = props.pageContext
 
   return (
-    <Layout pageTitle={`Page: ${currentPage}`}>
+    <Layout >
       {posts.map(({ node }) => (
         <Post
           key={node.id}
@@ -22,10 +22,12 @@ const postList = props => {
           fluid={node.frontmatter.image.childImageSharp.fluid}
         />
       ))}
+      <div>
       <PaginationLinks
         currentPage={currentPage}
         numberOfPages={numberOfPages}
       />
+      </div>
     </Layout>
   )
 }

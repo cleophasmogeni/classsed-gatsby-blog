@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../components/layout'
+import Layout from '../components/layout1'
 import SEO from '../components/seo'
 import authors from '../util/authors'
 import { Button, Card, CardText, CardBody, CardTitle, Row } from 'reactstrap'

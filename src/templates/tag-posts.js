@@ -1,14 +1,17 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/layout'
-import Post from '../components/Post'
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout1';
+import Post from '../components/Post1';
+import PaginationLinks from '../components/PaginationLinks';
 
 const tagPosts = ({ data, pageContext }) => {
+
   const { tag } = pageContext
   const { totalCount } = data.allMarkdownRemark
-  const pageHeader = `${totalCount} post${
+  const pageHeader = `${totalCount} Question${
     totalCount === 1 ? '' : 's'
-  } tagged with "${tag}"`
+  } related to "${tag}" `
+  
 
   return (
     <Layout pageTitle={pageHeader}>
@@ -23,6 +26,7 @@ const tagPosts = ({ data, pageContext }) => {
           tags={node.frontmatter.tags}
           fluid={node.frontmatter.image.childImageSharp.fluid}
         />
+        
       ))}
     </Layout>
   )
